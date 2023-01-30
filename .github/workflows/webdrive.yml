@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run wdio tests
-      run: 
+      run: npm run all-test
     - name: Generate allure-report
       run: npx allure generate allure-results --clean
     - uses: actions/upload-artifact@v3
