@@ -8,6 +8,8 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-20.04
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
@@ -16,7 +18,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run wdio tests
-      run: npm run all-test
+      run: npm run run:all-test
     - name: Generate allure-report
       run: npx allure generate allure-results --clean
     - uses: actions/upload-artifact@v3
