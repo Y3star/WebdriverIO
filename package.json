@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "run:all-test": "npx wdio run ./wdio.conf.js",
+    "run:all-test:headless": "npx wdio run ./wdio.chrome.headless.conf.js",
     "run:logIn-test": "npx wdio run ./wdio.conf.js --spec test/specs/logIn.js",
     "run:SignUp-test": "npx wdio run ./wdio.conf.js --spec test/specs/signUp.js",
     "run:Main-test": "npx wdio run ./wdio.conf.js --spec test/specs/main.js",
