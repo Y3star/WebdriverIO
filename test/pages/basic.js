@@ -30,4 +30,8 @@ module.exports = class Basic {
     async elementIsDisplayed(selector) {
         await Page.isElementDisplayed(selector);
     }
+    async fillInput(selector, value) {
+        await Page.setValue(selector, value);
+    }
+
 };

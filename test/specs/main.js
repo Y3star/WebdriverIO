@@ -14,7 +14,7 @@ beforeEach("Open page", async () => {
 });
 
 describe("Checking the header button on the homepage", () => {
-    it("Verification Main page, Expect url and title in Main page", async () => {
+    it("Verification Main page, Expect url and title", async () => {
         await expect(browser).toHaveUrl("https://telnyx.com/");
         await expect(browser).toHaveTitle(
             "Telnyx | Communication APIs for Seamless Connectivity"

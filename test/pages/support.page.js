@@ -9,9 +9,6 @@ class SupportPage extends Basic {
     async getList(selector) {
         return await Page.getListSize(selector);
     }
-    async fillInput(selector, value) {
-        await Page.setValue(selector, value);
-    }
 }
 
 module.exports = new SupportPage();

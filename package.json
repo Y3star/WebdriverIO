@@ -12,13 +12,15 @@
     "allure:clean": "rm -rf allure-results allure-report",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean",
-    "run:logIn_single_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/logIn.js",
+    "run:Blog_single_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/blog.js",
+    "run:LogIn_single_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/logIn.js",
     "run:SignUp_single_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/signUp.js",
     "run:Main_single_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/main.js",
     "run:Support_single_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/support.js",
     "run:logIn_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/logIn.js",
     "run:SignUp_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/signUp.js",
     "run:Main_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/main.js",
+    "run:Blog_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/blog.js",
     "run:Support_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/support.js"
   },
   "keywords": [

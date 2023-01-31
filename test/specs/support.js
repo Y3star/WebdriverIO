@@ -6,7 +6,7 @@ beforeEach("Open page", async () => {
 });
 
 describe("Search results tests", () => {
-    it("Verification Support page, Expect url and title in Support page", async () => {
+    it("Verification Support page, Expect url and title", async () => {
         await expect(browser).toHaveUrl("https://support.telnyx.com/en/");
         await expect(browser).toHaveTitle("Telnyx Support");
     });

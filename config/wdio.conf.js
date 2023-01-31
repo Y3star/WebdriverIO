@@ -294,5 +294,10 @@ exports.config = {
     before: async function (capabilities, specs, browser) {
         await browser.setWindowSize(1920, 1080);
         // await browser.setTimeout({ 'pageLoad': 35000 });
+    },
+    afterTest: async function(test, context, { error}) {
+        if (error) {
+            await browser.takeScreenshot();
+        }
     }
 }
