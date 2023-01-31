@@ -2,7 +2,7 @@ const { config } = require("./wdio.conf.js");
 
 const firefoxConfig = {
     ...config,
-    services: [["geckodriver", { firefox: "latest" }]], // https://github.com/mozilla/geckodriver/releases
+    services: [["geckodriver", { firefox: "latest" }]],
     capabilities: [
         {
             maxInstances: 1,

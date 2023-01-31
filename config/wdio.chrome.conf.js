@@ -3,7 +3,6 @@ const {config} = require("./wdio.conf");
 const chromeConfig = {
     ...config,
     services: [['chromedriver', {chrome: 'latest'}]],
-    // services: [['selenium-standalone', { chrome: 'latest' }]],
     capabilities: [{
         maxInstances: 3,
         browserName: "chrome",
