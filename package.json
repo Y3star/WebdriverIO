@@ -4,13 +4,17 @@
   "description": "Task project",
   "main": "index.js",
   "scripts": {
-    "run:all-test": "npx wdio run ./wdio.conf.js",
-    "run:all-test:headless": "npx wdio run ./wdio.chrome.headless.conf.js",
-    "run:logIn-test": "npx wdio run ./wdio.conf.js --spec test/specs/logIn.js",
-    "run:SignUp-test": "npx wdio run ./wdio.conf.js --spec test/specs/signUp.js",
-    "run:Main-test": "npx wdio run ./wdio.conf.js --spec test/specs/main.js",
-    "run:Support-test": "npx wdio run ./wdio.conf.js --spec test/specs/support.js",
-    "allure:clean": "rm -rf allure-results/* allure-report/*",
+    "run:all_test": "npx wdio run config/wdio.conf.js",
+    "run:all_test:headless": "npx wdio run ./config/wdio.chrome.headless.conf.js",
+    "run:logIn_test": "npx wdio run ./config/wdio.conf.js --spec test/specs/logIn.js",
+    "run:logIn_test_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/logIn.js",
+    "run:SignUp_test": "npx wdio run ./config/wdio.conf.js --spec test/specs/signUp.js",
+    "run:SignUp_test_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/signUp.js",
+    "run:Main_test": "npx wdio run ./config/wdio.conf.js --spec test/specs/main.js",
+    "run:Main_test_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/main.js",
+    "run:Support_test": "npx wdio run ./config/wdio.conf.js --spec test/specs/support.js",
+    "run:Support_test_firefox": "npx wdio run ./config/wdio.firefox.conf.js --spec test/specs/support.js",
+    "allure:clean": "rm -rf allure-results allure-report",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },
@@ -31,6 +35,8 @@
     "wdio-chromedriver-service": "^8.0.1"
   },
   "dependencies": {
-    "allure-commandline": "^2.20.1"
+    "allure-commandline": "^2.20.1",
+    "geckodriver": "^3.2.0",
+    "wdio-geckodriver-service": "^4.0.0"
   }
 }

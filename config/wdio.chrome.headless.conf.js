@@ -1,4 +1,4 @@
-const {config} = require("./wdio.conf");
+const {config} = require("./wdio.conf.js");
 require("path");
 const chromeHeadlessConfig = {
     ...config,
@@ -8,10 +8,10 @@ const chromeHeadlessConfig = {
         maxInstances: 5,
         browserName: "chrome",
         'goog:chromeOptions': {
-            args: ['--headless', '--start-maximized', '--no-sandbox', '--disable-gpu', '--window-size=1280,800', '--allow-insecure-localhost']
+            args: ['--headless','--start-maximized', '--no-sandbox', '--disable-gpu','--disable-dev-shm-usage','--window-size=1900,1000', '--allow-insecure-localhost', '--ignore-certificate-errors'],
+            excludeSwitches: ['--enable-logging']
         },
     }],
-    logLevel: 'warn',
 
     path: "/wd/hub",
 
