@@ -19,7 +19,7 @@
     "run:logIn_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/logIn.js",
     "run:SignUp_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/signUp.js",
     "run:Main_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/main.js",
-    "run:Support_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/support.js",
+    "run:Support_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/support.js"
   },
   "keywords": [
     "webdriverIO",
