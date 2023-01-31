@@ -8,7 +8,7 @@ const chromeHeadlessConfig = {
         maxInstances: 5,
         browserName: "chrome",
         'goog:chromeOptions': {
-            args: ['--headless','--start-maximized', '--no-sandbox', '--disable-gpu','--disable-dev-shm-usage','--window-size=1900,1000', '--allow-insecure-localhost', '--ignore-certificate-errors'],
+            args: ['--headless','--start-maximized', '--no-sandbox', '--disable-gpu','--disable-dev-shm-usage','--window-size=1920,1080', '--allow-insecure-localhost', '--ignore-certificate-errors'],
             excludeSwitches: ['--enable-logging']
         },
     }],

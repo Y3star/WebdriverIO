@@ -10,16 +10,13 @@ beforeEach("Open page", async () => {
     await SignUpPage.navigateTo("https://telnyx.com/sign-up");
 });
 
-describe("Verification Sign Up page", () => {
-    it("Expect url and title, and wait form in Sign Up page", async () => {
+describe("Sign Up page form", () => {
+    it("Verification Sign Up page, Expect url and title, and wait form in Sign Up page", async () => {
         await SignUpPage.clickElement(SignUpPage.closeCookiesButton);
         await expect(browser).toHaveUrl("https://telnyx.com/sign-up");
         await expect(browser).toHaveTitle("Sign Up | Telnyx");
         await SignUpPage.elementIsExist(SignUpPage.signUpForm);
     });
-});
-
-describe("Sign Up page form", () => {
     it("Positive Sign Up", async () => {
         await SignUpPage.fillSignUpForm();
     });
@@ -69,9 +66,6 @@ describe("Sign Up page form", () => {
             "Please accept the terms and conditions"
         );
     });
-});
-
-describe("Promo field on Sign Up form", () => {
     it("Check promo field", async () => {
         await SignUpPage.promoIsDisplayed();
     });

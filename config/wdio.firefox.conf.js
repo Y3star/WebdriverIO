@@ -8,7 +8,7 @@ const firefoxConfig = {
             maxInstances: 1,
             browserName: "firefox",
             "moz:firefoxOptions": {
-                args: ["--width=1900", "--height=1000"],
+                args: ["--width=1920", "--height=1080"],
             },
         },
     ],

@@ -5,17 +5,15 @@ beforeEach("Open page", async () => {
     await LoginPage.navigateTo("https://portal.telnyx.com/#/login/sign-in");
 });
 
-describe("Verification Log In page", () => {
-    it("Expect url and title , and wait form in Log In page", async () => {
+describe("Log In page form", () => {
+    it("Verification Log In page,Expect url and title , and wait form in Log In page", async () => {
         await expect(browser).toHaveUrl(
             "https://portal.telnyx.com/#/login/sign-in"
         );
         await expect(browser).toHaveTitle("Login / Telnyx Customer Portal");
         await LoginPage.elementIsExist(LoginPage.loginForm);
     });
-});
 
-describe("Log In page form", () => {
     it("Positive Log In", async () => {
         await LoginPage.fillLoginForm();
     });

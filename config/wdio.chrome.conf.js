@@ -1,0 +1,18 @@
+const {config} = require("./wdio.conf");
+
+const chromeConfig = {
+    ...config,
+    services: [['chromedriver', {chrome: 'latest'}]],
+    // services: [['selenium-standalone', { chrome: 'latest' }]],
+    capabilities: [{
+        maxInstances: 3,
+        browserName: "chrome",
+        'goog:chromeOptions': {
+            args: ['--start-maximized', '--no-sandbox', '--disable-gpu','--disable-dev-shm-usage','--window-size=1920,1080', '--allow-insecure-localhost','--ignore-certificate-errors'],
+            excludeSwitches: ['--enable-logging']
+        },
+    }],
+    path: "/wd/hub",
+};
+
+exports.config = chromeConfig;
