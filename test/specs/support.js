@@ -1,8 +1,10 @@
 const assert = require("assert");
 const SupportPage = require("../pages/support.page.js");
+const helper = require('../helpers/helper.js');
+const envURLs = helper.parseJsonFile('./environments/env.json');
 
 beforeEach("Open page", async () => {
-    await SupportPage.navigateTo("https://support.telnyx.com/en/");
+    await SupportPage.navigateTo(envURLs.SUPPORT_URL);
 });
 
 describe("Search results tests", () => {

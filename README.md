@@ -1,6 +1,6 @@
 ***WebdriverIO + Docker***
 
-***Setup***
+***Setup and commands***
 
 ***Download git repository and use install node modules.***
 ```console

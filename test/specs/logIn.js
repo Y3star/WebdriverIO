@@ -1,8 +1,10 @@
 const assert = require("assert");
 const LoginPage = require("../pages/login.page.js");
+const helper = require('../helpers/helper.js');
+const envURLs = helper.parseJsonFile('./environments/env.json');
 
 beforeEach("Open page", async () => {
-    await LoginPage.navigateTo("https://portal.telnyx.com/#/login/sign-in");
+    await LoginPage.navigateTo(envURLs.LOG_IN_URL);
 });
 
 describe("Log In page form", () => {

@@ -1,13 +1,16 @@
 const assert = require("assert");
 const SignUpPage = require("../pages/signup.page.js");
+const helper = require('../helpers/helper.js');
+const envURLs = helper.parseJsonFile('./environments/env.json');
 const arrayError = [
     "Be at least 12 characters long",
     "Contain at least one number",
     "Contain at least one symbol",
     "Contain at least one upper-case letter",
 ];
+
 beforeEach("Open page", async () => {
-    await SignUpPage.navigateTo("https://telnyx.com/sign-up");
+    await SignUpPage.navigateTo(envURLs.SIGN_UP_URL);
 });
 
 describe("Sign Up page form", () => {

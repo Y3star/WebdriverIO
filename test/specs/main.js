@@ -1,5 +1,6 @@
-const assert = require("assert");
 const MainPage = require("../pages/main.page");
+const helper = require('../helpers/helper.js');
+const envURLs = helper.parseJsonFile('./environments/env.json');
 
 const arrayMenusTitle = [
     "Products",
@@ -10,7 +11,7 @@ const arrayMenusTitle = [
 ];
 
 beforeEach("Open page", async () => {
-    await MainPage.navigateTo("/");
+    await MainPage.navigateTo(envURLs.MAIN_URL);
 });
 
 describe("Checking the header button on the homepage", () => {
