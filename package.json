@@ -21,7 +21,10 @@
     "run:SignUp_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/signUp.js",
     "run:Main_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/main.js",
     "run:Blog_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/blog.js",
-    "run:Support_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/support.js"
+    "run:Support_single_chrome": "npx wdio run ./config/wdio.chrome.conf.js --spec test/specs/support.js",
+    "config": "sh -ac 'if test \"$TESTS_ENV\"; then cp environments/env.${TESTS_ENV}.json.template environments/env.json; fi'",
+    "test:chrome:headless:ui": "cross-env TESTS_ENV=ui npm run config && ./node_modules/.bin/wdio config/wdio.chrome.headless.conf.js",
+    "docker": "docker-compose up -d"
   },
   "keywords": [
     "webdriverIO",
@@ -41,6 +44,7 @@
   },
   "dependencies": {
     "allure-commandline": "^2.20.1",
+    "cross-env": "^7.0.3",
     "geckodriver": "^3.2.0",
     "wdio-geckodriver-service": "^4.0.0"
   }
