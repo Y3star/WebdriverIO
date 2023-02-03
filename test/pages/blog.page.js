@@ -6,7 +6,7 @@ class BlogPage extends Basic {
     blogEmail = "#Email";
     errorBlogEmail = '#Email_error';
     blogButtonSubscribe = 'button[type="submit"]';
-    outputSearch = "#articles > div:first-of-type";
+    outputSearch = "#articles > div";    
 }
 
 module.exports = new BlogPage();

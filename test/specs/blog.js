@@ -12,6 +12,7 @@ describe("Test search input and email input in Blog page ", () => {
             "Read Our Blog Posts, Updates and Tutorials"
         );
         await BlogPage.clickElement(BlogPage.closeCookiesButton);
+        await browser.pause(100);
     });
     it("Result found", async () => {
         await BlogPage.fillInput(BlogPage.blogSearch, "a");
