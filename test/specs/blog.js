@@ -13,25 +13,22 @@ describe("Test search input and email input in Blog page ", () => {
         );
         await BlogPage.clickElement(BlogPage.closeCookiesButton);
     });
-
     it("Result found", async () => {
         await BlogPage.fillInput(BlogPage.blogSearch, "a");
-        await browser.pause(200);
         await browser.keys("\uE007");
-        await browser.pause(200);
+        await browser.pause(100);
         assert.strictEqual(
             await BlogPage.getElementText(BlogPage.outputSearch),
             'Search results for "a"'
         );
     });
     it("Result not found", async () => {
-        await BlogPage.fillInput(BlogPage.blogSearch, "*=");
-        await browser.pause(200);
+        await BlogPage.fillInput(BlogPage.blogSearch, "***");
         await browser.keys("\uE007");
-        await browser.pause(200);
+        await browser.pause(100);
         assert.strictEqual(
             await BlogPage.getElementText(BlogPage.outputSearch),
-            'No results found for "*="'
+            'No results found for "***"'
         );
     });
     it("Positive subscribe", async()=>{
@@ -45,6 +42,5 @@ describe("Test search input and email input in Blog page ", () => {
             await BlogPage.getElementText(BlogPage.errorBlogEmail),
             'Please enter a valid email address.'
         );
-
     })
 });
