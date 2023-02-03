@@ -16,12 +16,11 @@ describe("Test search input and email input in Blog page ", () => {
             "Read Our Blog Posts, Updates and Tutorials"
         );
         await BlogPage.clickElement(BlogPage.closeCookiesButton);
-        await browser.pause(100);
     });
     it("Result found", async () => {
         await BlogPage.fillInput(BlogPage.blogSearch, "a");
         await browser.keys("\uE007");
-        await browser.pause(2500);
+        await browser.pause(3000);
         assert.strictEqual(
             await BlogPage.getElementText(BlogPage.outputSearch),
             'Search results for "a"'
@@ -30,7 +29,7 @@ describe("Test search input and email input in Blog page ", () => {
     it("Result not found", async () => {
         await BlogPage.fillInput(BlogPage.blogSearch, "***");
         await browser.keys("\uE007");
-        await browser.pause(2500);
+        await browser.pause(3000);
         assert.strictEqual(
             await BlogPage.getElementText(BlogPage.outputSearch),
             'No results found for "***"'
