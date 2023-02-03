@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: 16
     - name: Install dependencies
-      run: npm i npm@latest
+      run: npm install
     - name: Run wdio tests
       run: npm run run:chrome:headless
     - name: Generate allure-report

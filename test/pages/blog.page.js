@@ -1,5 +1,4 @@
 const Basic = require("./basic.js");
-const Page = require("./page.js");
 
 class BlogPage extends Basic {
     blogSearch = "#search";
